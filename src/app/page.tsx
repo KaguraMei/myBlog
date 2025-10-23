@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Navigation from "@/components/Navigation";
 
 export default function Home() {
   return (
@@ -14,41 +15,7 @@ export default function Home() {
       <div className="fixed bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-[#ffff0e]/30 pointer-events-none" />
 
       {/* Navigation */}
-      <nav className="glass-morphism fixed top-0 left-0 right-0 z-50 border-b border-[#ffff0e]/20">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-[#ffff0e] relative">
-                <div className="absolute inset-1 border border-black/30" />
-              </div>
-              <span className="text-xl font-bold text-[#ffff0e] yellow-text-glow tracking-wider">DEVLOG</span>
-              <div className="ml-4 text-[#ffff0e]/40 text-xs font-mono">v2.5.1</div>
-            </div>
-            <div className="flex gap-8 items-center">
-              <a href="#" className="text-sm text-gray-400 hover:text-[#ffff0e] transition-colors uppercase tracking-wider relative group">
-                HOME
-                <div className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#ffff0e] group-hover:w-full transition-all" />
-              </a>
-              <a href="#" className="text-sm text-gray-400 hover:text-[#ffff0e] transition-colors uppercase tracking-wider relative group">
-                ARTICLES
-                <div className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#ffff0e] group-hover:w-full transition-all" />
-              </a>
-              <a href="/projects" className="text-sm text-gray-400 hover:text-[#ffff0e] transition-colors uppercase tracking-wider relative group">
-                PROJECTS
-                <div className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#ffff0e] group-hover:w-full transition-all" />
-              </a>
-              <a href="#" className="text-sm text-gray-400 hover:text-[#ffff0e] transition-colors uppercase tracking-wider relative group">
-                ABOUT
-                <div className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#ffff0e] group-hover:w-full transition-all" />
-              </a>
-              <button className="px-6 py-2 bg-[#ffff0e] text-black font-bold uppercase text-sm hover:bg-[#ffff0e]/90 transition-all yellow-glow relative overflow-hidden group">
-                <div className="absolute inset-0 bg-black/10 translate-x-full group-hover:translate-x-0 transition-transform" />
-                <span className="relative">CONTACT</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="home" />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 relative overflow-hidden">

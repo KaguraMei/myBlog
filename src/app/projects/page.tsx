@@ -204,7 +204,7 @@ export default function ProjectsPage() {
               const isFunded = project.status === "FUNDED";
 
               return (
-                <div key={project.id} className="glass-card p-0 group hover:border-[#ffff0e]/30 transition-all cursor-pointer relative overflow-hidden">
+                <Link href={`/projects/${project.id}`} key={project.id} className="glass-card p-0 group hover:border-[#ffff0e]/30 transition-all cursor-pointer relative overflow-hidden block">
                   {/* Status Badge */}
                   {isFunded && (
                     <div className="absolute top-4 right-4 z-20 px-3 py-1 bg-[#ffff0e] text-black text-xs font-bold uppercase tracking-wider">
@@ -271,12 +271,12 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* Action Button */}
-                    <button className="w-full py-3 bg-[#ffff0e]/10 border border-[#ffff0e]/30 text-[#ffff0e] font-bold uppercase text-sm tracking-wider hover:bg-[#ffff0e] hover:text-black transition-all relative overflow-hidden group/btn">
+                    <div className="w-full py-3 bg-[#ffff0e]/10 border border-[#ffff0e]/30 text-[#ffff0e] font-bold uppercase text-sm tracking-wider hover:bg-[#ffff0e] hover:text-black transition-all relative overflow-hidden group/btn">
                       <div className="absolute inset-0 bg-[#ffff0e] translate-y-full group-hover/btn:translate-y-0 transition-transform" />
                       <span className="relative">立即参与</span>
-                    </button>
+                    </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
